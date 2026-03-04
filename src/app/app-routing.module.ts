@@ -35,6 +35,11 @@ const routes: Routes = [
     path: 'monitoramento',
     loadComponent: () => import('./monitoramento/monitoramento.page').then(m => m.MonitoramentoPage),
     canActivate: [AuthGuard] // 🛡️ Protegido
+  },
+  {
+    path: 'soloia',
+    loadChildren: () => import('./soloia/soloia.module').then(m => m.SoloIAPageModule),
+    canActivate: [AuthGuard] // 🛡️ Protegido
   }
 ];
 
